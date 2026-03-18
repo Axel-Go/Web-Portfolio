@@ -1,0 +1,231 @@
+
+
+html {
+    scroll-behavior: smooth;
+    
+    color: #C5C6C7;
+}
+
+#home {
+    background-image: url(images/mercedes-w15.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    background-image: 
+        linear-gradient(to bottom, rgba(0,0,0,0) 50%, #111 100%),
+        url(images/mercedes-w15.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+
+html, body {
+    font-family: 'Syne', sans-serif;
+    height: 100%;
+    margin: 0;
+    
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color:#101519;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin-left: 0;
+    font-size: 25px;
+    display: flex;
+    justify-content: left;      
+    position: absolute;
+    flex-direction: column;
+    width: 220px;
+    height: 100vh;
+    padding: 20px;                
+    z-index: 10;                      
+    position: fixed; 
+}
+
+
+.navbar a {
+    
+    display: inline-block;
+    margin: 50px 0;
+    color: #C5C6C7;
+    text-decoration: none;
+
+}
+
+.navbar a:hover {
+    color: crimson;
+    text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+    background-color: none;
+}
+
+.navbar a.active {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.home-content {
+
+    position: absolute;
+    top: 28%;                 
+    right: 50px;              
+    transform: translateY(-50%); 
+    text-align: right;       
+    color: #C5C6C7;
+}
+
+.home-content h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 75px;
+    margin-right: 50px;
+}
+
+.home-content h3 {
+    margin-right: 55px;
+    font-size: 18px;
+    
+    
+}
+
+#about {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden; /* ensures no scrollbars from the blur */
+    background-color: #101519; /* fallback color */
+
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/mercedeshamilton.jpg') center/cover no-repeat;
+    filter: blur(12px);             /* only the image is blurred */
+    opacity: 0.6;                   /* makes it more subtle */
+    z-index: 0;                     /* behind content */
+}
+
+#about::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* how far it fades */
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #101519);
+    pointer-events: none; /* so it doesn’t block clicks */
+    z-index: 1;
+}
+
+.about-flex {
+    display: flex;
+    justify-content: space-between;  /* text left, image right */
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap; /* responsive for smaller screens */
+}
+
+
+
+
+
+.about-content {
+    margin-top: 13%;
+    padding-left: 20%;
+    max-width: 950px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    
+}
+
+.about-content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p{
+    position: relative;
+    font-size: 20px;
+    
+}
+
+.about-photo img {
+    width: 600px; /* adjust size */
+    max-width: 100%;
+    align-self: flex-end;
+    margin-top: 35%;
+    height: auto;
+    display: block;
+    margin-right: 90px;
+    
+}
+
+.about-content, .about-photo {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.about-content.active, .about-photo.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column; /* stack text and image */
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+#portfolio {
+    background-color: #101519;
+    background: -moz-linear-gradient(50px);
+    background: linear-gradient(to top, #111 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 40%), #111;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+#contact {
+
+    background-color: #101519;
+    background: -moz-linear-gradient(50px);
+    background: linear-gradient(to top, #111 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 40%), #111;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+
+
+}
+
+
+
+
+
